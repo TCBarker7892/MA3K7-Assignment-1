@@ -1,0 +1,23 @@
+import numpy as np
+
+def Increment(k):
+    return 10*(k%10) + (k//10 + k%10)%10
+
+numberPairs = list(range(100))
+braceletCount = 0
+
+while len(numberPairs) != 0:
+    
+    startPair = numberPairs[0]
+    currentPair = startPair
+    numberPairs.remove(startPair)
+    nextPair = Increment(currentPair)
+    
+    while(nextPair != startPair):
+        currentPair = nextPair
+        nextPair = Increment(currentPair)
+        numberPairs.remove(currentPair)
+        
+    braceletCount += 1
+    
+print(braceletCount)
