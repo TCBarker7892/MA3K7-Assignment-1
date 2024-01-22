@@ -18,7 +18,7 @@ while len(numberPairs) != 0:
     nextPair = Increment(currentPair)
     
     while(nextPair != startPair):
-        # Loops over one bracelet, calculating all values and removing each pair found from numberPairs until it reaches the start again
+        # Loops over one bracelet, calculating all values and removing each pair found from numberPairs
 
         currentPair = nextPair
         nextPair = Increment(currentPair)
